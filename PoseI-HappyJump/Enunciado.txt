@@ -1,0 +1,20 @@
+Buenas a todos, les envio por este medio las reglas para la primera asignacion Pose I.
+
+
+1. Usando el rigging visto en clase y enviado en un correo previo, la primera pose que deberan realizar sera "happy jump".
+
+2. La entrega sera un archivo de imagen de 1600x600 jpg o png, siguiendo el formato del attchment. En una mitad ponen la imafen de referencia y en la otra el render de la pose.
+
+3. El proyecto es individual.
+
+4. El formato de la entrega sera el siguiente:
+
+       - En el subject del correo colocan: Pose I - Graficas II 2014 - NombreEstudiante.
+       - El nombre del archivo el siguiente formato: nombreapellido.png.
+
+5. El dia tope de entrega sera el viernes de semana 2 hasta las 11:59pm.
+
+
+NOTA: va ver una pequeña penalizacion en la nota, si no cumplen el punto 4, algunos estudiantes pasaban por alto esto en graficas I.
+
+Saludos
