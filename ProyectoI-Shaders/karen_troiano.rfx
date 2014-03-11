@@ -1020,7 +1020,7 @@ Pass 0]]></RmTextDataBlock></RmStringVariable>
     </RmRegistryBranch>
     <RmRegistryBranch NAME="WORKSPACE" API="" XML_VERSION="RenderMonkey 1.71">
      <RmStringVariable NAME="LAST_SAVE" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
-9/3/2014 18:8:23]]></RmTextDataBlock></RmStringVariable>
+11/3/2014 12:44:32]]></RmTextDataBlock></RmStringVariable>
      <RmStringVariable NAME="VERSION" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
 RenderMonkey Version 1.82 (build 322)]]></RmTextDataBlock></RmStringVariable>
      <RmStringVariable NAME="XML_VERSION" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
@@ -1047,7 +1047,7 @@ C:\Users\Karen Troiano\Documents\GitHub\GraficasII\ProyectoI-Shaders\]]></RmText
      <RmModelReference NAME="Model" API=""/>
      <RmGLShader NAME="Vertex Program" API="OpenGL" PIXEL_SHADER="FALSE"><RmShaderCode TYPE="TEXT"><![CDATA[
 uniform vec4 lightVector, cMD, cMA, cMS;
-uniform bool tLight, useNormalM;
+uniform bool tLight;
 
 varying vec2 v_texCoord2D;
 varying vec3 v_texCoord3D;
@@ -1094,24 +1094,15 @@ void main(void)
    vec3 t = gl_NormalMatrix * rm_Tangent;
    vec3 b = gl_NormalMatrix * rm_Binormal;
    
-   if (useNormalM) {
+   vC.x = dot(t,cam);
+   vC.y = dot(b,cam);
+   vC.z = dot(vN,cam);
    
-      vC.x = dot(t,cam);
-      vC.y = dot(b,cam);
-      vC.z = dot(vN,cam);
-      
-      vld.x = dot(t,auxld);
-      vld.y = dot(b,auxld);
-      vld.z = dot(vN,auxld);
-      
-   } else {
+   vld.x = dot(t,auxld);
+   vld.y = dot(b,auxld);
+   vld.z = dot(vN,auxld);
    
-      vld = auxld;
-      vC = cam;
-      
-   }
-      
-
+   
    vMD = cMD;
    vMA = cMA;
    vMS = cMS;
@@ -1120,10 +1111,9 @@ void main(void)
 
 }]]></RmShaderCode></RmGLShader>
      <RmGLShader NAME="Fragment Program" API="OpenGL" PIXEL_SHADER="TRUE"><RmShaderCode TYPE="TEXT"><![CDATA[
-uniform float iLight, shine, iSpec,freq, ratio, rU, rV;
+uniform float iLight, shine, iSpec,freq, ratio;
 uniform vec4 cL;
 uniform int MINFREQ, MAXFREQ;
-uniform bool useNormalM;
 
 uniform float fTime0_X;
 
@@ -1153,7 +1143,7 @@ float snoise(const in vec2 P) {
 #define G2 0.211324865405
 
   // Skew the (x,y) space to determine which cell of 2 simplices we're in
-    float s = (P.x + P.y) * F2;   // Hairy factor for 2D skewing
+  float s = (P.x + P.y) * F2;   // Hairy factor for 2D skewing
   vec2 Pi = floor(P + s);
   float t = (Pi.x + Pi.y) * G2; // Hairy factor for unskewing
   vec2 P0 = Pi - t; // Unskew the cell origin back to (x,y) space
@@ -1222,28 +1212,23 @@ void main(void){
 
    vec2 auxcoordUV;
    
-   auxcoordUV.s = mod(rU*coordUV.s, 1.0);
-   auxcoordUV.t = mod(rV*coordUV.t, 1.0);
+   auxcoordUV.s = mod(coordUV.s, 1.0);
+   auxcoordUV.t = mod(coordUV.t, 1.0);
 
    //Textura
    vec4 ccTex01 = texture2D(texCC01, auxcoordUV);
    vec4 spTex01 = texture2D(texSP01, auxcoordUV);
    vec4 roca = texture2D(permTexture, auxcoordUV);
-   vec3 npTex01 = (texture2D(texNP01,auxcoordUV).xyz * 2.0) - 1.0;
-   
-   vec3 N;
-   if (useNormalM)
-      N = normalize(npTex01);
-   else
-      N = normalize(vN);
-      
+   vec3 lava = (texture2D(texNP01,auxcoordUV).xyz * 2.0) - 1.0;
+ 
+   vec3 N = normalize(vN);
    
    float n = fractalsum(v_texCoord2D + sin(fTime0_X*0.25));
+   vec3 lav = (10 * lava * vMA * vec4(ratio + ratio*vec3(n,n,n), 1.0));
     
    //Componente difuso
    dotLN = max( dot( normalize(vld), normalize(N) )   , 0.0);
-   vec4 cl = (10* vMA * vec4( ratio + ratio*vec3(n,n,n), 1.0));
-   cDif = cl * cL * ccTex01 * dotLN ;
+   cDif = ccTex01 * dotLN ;
    
    //Componente Especular
    cSpec = vec4(0.0,0.0,0.0,0.0);
@@ -1252,18 +1237,15 @@ void main(void){
       cSpec = vMD * pow( max( dot(r,normalize(vC)) , 0.0)  ,shine) * spTex01 ;
    }
    
-   gl_FragColor = roca + iLight * (cDif + iSpec*cSpec);
-
+   //vec4(lav.xyz, 1.0) ;
+   gl_FragColor =  vec4(lava.xyz, 1.0) * (iLight * (cDif + iSpec*cSpec)) + vec4(lava.xyz, 1.0);
 
 }]]></RmShaderCode></RmGLShader>
      <RmStreamMapReference NAME="Stream Mapping" API=""/>
      <RmBooleanVariable NAME="tLight" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="TRUE"/>
-     <RmBooleanVariable NAME="useNormalM" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="TRUE"/>
-     <RmFloatVariable NAME="iLight" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="3.000000" MIN="0.000000" MAX="1.000000" CLAMP="FALSE"/>
+     <RmFloatVariable NAME="iLight" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="1.090000" MIN="0.000000" MAX="1.000000" CLAMP="FALSE"/>
      <RmFloatVariable NAME="shine" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="5.000000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
      <RmFloatVariable NAME="iSpec" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="0.310000" MIN="0.000000" MAX="1.000000" CLAMP="TRUE"/>
-     <RmFloatVariable NAME="rU" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="2.000000" MIN="0.000000" MAX="10.000000" CLAMP="TRUE"/>
-     <RmFloatVariable NAME="rV" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="2.000000" MIN="0.000000" MAX="10.000000" CLAMP="TRUE"/>
      <RmVectorVariable NAME="lightVector" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="-50.000000" VALUE_1="1.000000" VALUE_2="100.000000" VALUE_3="0.000000" MIN="-10.000000" MAX="10.000000" CLAMP="FALSE" NORMALIZE="FALSE"/>
      <RmDynamicVariable NAME="MINFREQ" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VARIABLE_TYPE="INTEGER" ROWS="1" COLUMNS="1" FIXED_SIZE="TRUE" MIN="0" MAX="300" CLAMP="TRUE" NORMALIZE="FALSE">
       <RmDynamicVariableValueContainer>
@@ -1276,11 +1258,11 @@ void main(void){
       </RmDynamicVariableValueContainer>
      </RmDynamicVariable>
      <RmFloatVariable NAME="freq" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="9.000000" MIN="0.000000" MAX="300.000000" CLAMP="TRUE"/>
-     <RmFloatVariable NAME="fTime0_X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="Time0_X" VALUE="27.911451" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
+     <RmFloatVariable NAME="fTime0_X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="Time0_X" VALUE="119.582069" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
      <RmFloatVariable NAME="ratio" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="0.160000" MIN="0.000000" MAX="1.000000" CLAMP="TRUE"/>
-     <RmColorVariable NAME="cL" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="0.494737" VALUE_1="0.105263" VALUE_2="0.193684" VALUE_3="1.000000"/>
-     <RmColorVariable NAME="cMD" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="0.147368" VALUE_1="1.000000" VALUE_2="0.126316" VALUE_3="1.000000"/>
-     <RmColorVariable NAME="cMA" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="1.000000" VALUE_1="0.905263" VALUE_2="0.031579" VALUE_3="1.000000"/>
+     <RmColorVariable NAME="cL" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="0.494118" VALUE_1="0.105263" VALUE_2="0.193684" VALUE_3="1.000000"/>
+     <RmColorVariable NAME="cMD" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="1.000000" VALUE_1="1.000000" VALUE_2="0.126316" VALUE_3="1.000000"/>
+     <RmColorVariable NAME="cMA" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="1.000000" VALUE_1="0.368898" VALUE_2="0.705542" VALUE_3="1.000000"/>
      <RmColorVariable NAME="cMS" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="0.917647" VALUE_1="0.263669" VALUE_2="1.000000" VALUE_3="1.000000"/>
      <Rm2DTextureVariable NAME="tdxBP_rock" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" FILE_NAME=".\tdxBP_rock.tga" ORIGIN="0"/>
      <RmTextureObject NAME="texNP01" API="OpenGL" STATE_INDEX="0" VERTEX_TEXTURE="FALSE">
@@ -1299,19 +1281,15 @@ void main(void){
      <RmSampler NAME="texCC01" API="" REGISTER="-1"/>
      <RmSampler NAME="texSP01" API="" REGISTER="-1"/>
      <RmSampler NAME="texNP01" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="cMA" API="" REGISTER="-1"/>
      <RmShaderConstant NAME="cMS" API="" REGISTER="-1"/>
      <RmShaderConstant NAME="lightVector" API="" REGISTER="-1"/>
      <RmShaderConstant NAME="MINFREQ" API="" REGISTER="-1"/>
      <RmShaderConstant NAME="MAXFREQ" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="rU" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="rV" API="" REGISTER="-1"/>
      <RmShaderConstant NAME="tLight" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="useNormalM" API="" REGISTER="-1"/>
      <RmShaderConstant NAME="cMD" API="" REGISTER="-1"/>
+     <RmShaderConstant NAME="cMA" API="" REGISTER="-1"/>
      <RmShaderConstant NAME="fTime0_X" API="" REGISTER="-1"/>
      <RmShaderConstant NAME="ratio" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="cL" API="" REGISTER="-1"/>
      <RmShaderConstant NAME="shine" API="" REGISTER="-1"/>
      <RmShaderConstant NAME="iLight" API="" REGISTER="-1"/>
      <RmShaderConstant NAME="iSpec" API="" REGISTER="-1"/>
