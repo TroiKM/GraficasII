@@ -905,7 +905,7 @@
    >
 ]>
 <RENDER_MONKEY>
- <RmEffectWorkspace NAME="Effect Workspace" API="" ACTIVE_EFFECT="Effect Workspace.Practica03.Texture" VALIDATION_STRING="" XML_VERSION="RenderMonkey 1.71">
+ <RmEffectWorkspace NAME="Effect Workspace" API="" ACTIVE_EFFECT="Effect Workspace.Practica02.Cartoon" VALIDATION_STRING="" XML_VERSION="RenderMonkey 1.71">
   <RmRegistryBranch NAME="RM_REGISTRY" API="" XML_VERSION="RenderMonkey 1.71">
    <RmRegistryBranch NAME="RM_LOCAL" API="" XML_VERSION="RenderMonkey 1.71">
     <RmRegistryBranch NAME="RM_PLUGIN" API="" XML_VERSION="RenderMonkey 1.71"><RmTextDataBlock TYPE="TEXT"><![CDATA[
@@ -1031,21 +1031,21 @@
      <RmRegistryBranch NAME="RmPreviewGLWindow" API="" XML_VERSION="RenderMonkey 1.71">
       <RmRegistryBranch NAME="EffectPlacementRepository" API="" XML_VERSION="RenderMonkey 1.71">
        <RmRegistryBranch NAME="Effect Workspace.Practica02.Cartoon" API="" XML_VERSION="RenderMonkey 1.71">
-        <RmIntegerVariable NAME="X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="46" MIN="-10" MAX="10" CLAMP="FALSE"/>
-        <RmIntegerVariable NAME="Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="7" MIN="-10" MAX="10" CLAMP="FALSE"/>
-        <RmIntegerVariable NAME="Width" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="512" MIN="-10" MAX="10" CLAMP="FALSE"/>
-        <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="426" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="225" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="56" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Width" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="350" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="350" MIN="-10" MAX="10" CLAMP="FALSE"/>
         <RmIntegerVariable NAME="ShowStatus" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
-        <RmIntegerVariable NAME="Visible" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
-        <RmIntegerVariable NAME="Minimized X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
-        <RmIntegerVariable NAME="Minimized Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="398" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Visible" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Minimized X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="Minimized Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
        </RmRegistryBranch>
        <RmRegistryBranch NAME="Effect Workspace.Practica02.PixelLight" API="" XML_VERSION="RenderMonkey 1.71">
         <RmIntegerVariable NAME="X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="225" MIN="-10" MAX="10" CLAMP="FALSE"/>
         <RmIntegerVariable NAME="Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="56" MIN="-10" MAX="10" CLAMP="FALSE"/>
         <RmIntegerVariable NAME="Width" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="350" MIN="-10" MAX="10" CLAMP="FALSE"/>
         <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="350" MIN="-10" MAX="10" CLAMP="FALSE"/>
-        <RmIntegerVariable NAME="ShowStatus" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="3" MIN="-10" MAX="10" CLAMP="FALSE"/>
+        <RmIntegerVariable NAME="ShowStatus" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
         <RmIntegerVariable NAME="Visible" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
         <RmIntegerVariable NAME="Minimized X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
         <RmIntegerVariable NAME="Minimized Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
@@ -1111,14 +1111,14 @@
       <RmRegistryBranch NAME="Effect Workspace.Practica02.PixelLight" API="" XML_VERSION="RenderMonkey 1.71">
        <RmRegistryBranch NAME="Disassembly" API="" XML_VERSION="RenderMonkey 1.71"/>
        <RmStringVariable NAME="Editing Shader" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
-Vertex Program]]></RmTextDataBlock></RmStringVariable>
+Fragment Program]]></RmTextDataBlock></RmStringVariable>
        <RmStringVariable NAME="Editing Pass" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
 Pass 0]]></RmTextDataBlock></RmStringVariable>
        <RmIntegerVariable NAME="Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="Width" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="650" MIN="-10" MAX="10" CLAMP="FALSE"/>
-       <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="507" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="505" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="ShowStatus" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
-       <RmIntegerVariable NAME="Visible" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="Visible" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="Minimized X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="Minimized Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
@@ -1156,14 +1156,14 @@ Pass 0]]></RmTextDataBlock></RmStringVariable>
       <RmRegistryBranch NAME="Effect Workspace.Practica04.TextureNoise01" API="" XML_VERSION="RenderMonkey 1.71">
        <RmRegistryBranch NAME="Disassembly" API="" XML_VERSION="RenderMonkey 1.71"/>
        <RmStringVariable NAME="Editing Shader" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
-Vertex Program]]></RmTextDataBlock></RmStringVariable>
+Fragment Program]]></RmTextDataBlock></RmStringVariable>
        <RmStringVariable NAME="Editing Pass" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
 Pass 0]]></RmTextDataBlock></RmStringVariable>
        <RmIntegerVariable NAME="Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="Width" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="755" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="505" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="ShowStatus" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
-       <RmIntegerVariable NAME="Visible" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="Visible" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="Minimized X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="Minimized Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
@@ -1179,6 +1179,21 @@ Pass 0]]></RmTextDataBlock></RmStringVariable>
        <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="505" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="ShowStatus" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="Visible" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="Minimized X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="Minimized Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
+      </RmRegistryBranch>
+      <RmRegistryBranch NAME="Effect Workspace.Practica02.Cartoon" API="" XML_VERSION="RenderMonkey 1.71">
+       <RmRegistryBranch NAME="Disassembly" API="" XML_VERSION="RenderMonkey 1.71"/>
+       <RmStringVariable NAME="Editing Shader" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
+Vertex Program]]></RmTextDataBlock></RmStringVariable>
+       <RmStringVariable NAME="Editing Pass" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
+Pass 0]]></RmTextDataBlock></RmStringVariable>
+       <RmIntegerVariable NAME="Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="Width" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="650" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="Height" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="505" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="ShowStatus" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
+       <RmIntegerVariable NAME="Visible" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="Minimized X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="Minimized Y" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="-1" MIN="-10" MAX="10" CLAMP="FALSE"/>
        <RmIntegerVariable NAME="X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="0" MIN="-10" MAX="10" CLAMP="FALSE"/>
@@ -1235,7 +1250,7 @@ Pass 0]]></RmTextDataBlock></RmStringVariable>
     </RmRegistryBranch>
     <RmRegistryBranch NAME="WORKSPACE" API="" XML_VERSION="RenderMonkey 1.71">
      <RmStringVariable NAME="LAST_SAVE" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
-14/3/2014 15:34:27]]></RmTextDataBlock></RmStringVariable>
+15/3/2014 17:32:42]]></RmTextDataBlock></RmStringVariable>
      <RmStringVariable NAME="VERSION" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
 RenderMonkey Version 1.82 (build 322)]]></RmTextDataBlock></RmStringVariable>
      <RmStringVariable NAME="XML_VERSION" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
@@ -1270,11 +1285,10 @@ void main(void)
    
    ld = lightDirection;
 
-
    gl_Position = ftransform();
 }]]></RmShaderCode></RmGLShader>
      <RmGLShader NAME="Fragment Program" API="OpenGL" PIXEL_SHADER="TRUE"><RmShaderCode TYPE="TEXT"><![CDATA[
-uniform vec4 c1;
+/*uniform vec4 c1;
 uniform vec4 c2;
 uniform vec4 c3;
 uniform vec4 c4;
@@ -1291,7 +1305,6 @@ varying vec4 ld;
 
 void main(void)
 {
-
    float cosV;
    vec4 color = vec4(0.0,0.0,0.0,0.0);
    
@@ -1305,31 +1318,64 @@ void main(void)
    else if (cosV > f3)
       color = c3;
    else
-      color = c4;
-      
-      
+      color = c4;  
 
    gl_FragColor = intensidadL*color;
+
+
+
+}*/
+
+varying vec3 normal;
+varying vec4 ecPos;
+ 
+uniform sampler2D DiffuseMap;   // Diffuse Map (base texture)
+ 
+uniform float Rim_Start;      // Rim Begin      Range 0.0 > 1.0
+uniform float Rim_End;      // Rim End       Range 0.0 > 1.0
+uniform float Rim_Multiplier;   // Rim Multiplier   Range 0.0 > 5.0
+uniform vec4 Rim_Color;      // Rim Color
+ 
+uniform vec3 Light_Direction;   // Light Direction Vector
+uniform vec4 Ambient_Color;      // Ambient Light Color
+uniform vec4 Light_Color;      // Light Color
+ 
+const vec3 CameraPosition = vec3(0.0);
+ 
+void main()
+{
+   vec4 tex = texture2D(DiffuseMap, gl_TexCoord[0].xy);
+ 
+   vec3 N = normalize(normal);
+   vec3 V = normalize(CameraPosition - (ecPos.xyz / ecPos.z));
+   float rim = smoothstep(Rim_Start, Rim_End, 1.0 - dot(N,V));
+ 
+   vec3 L = normalize(-Light_Direction);
+   float lightAmount = max(dot(N, L), 0.0);
+   vec4 lighting = Ambient_Color + vec4(lightAmount) * Light_Color;
+   lighting.a = 1.0;
+ 
+   //Multiply color by texture
+   gl_FragColor = tex * lighting + rim * Rim_Multiplier * Rim_Color;
 }]]></RmShaderCode></RmGLShader>
      <RmStreamMapReference NAME="Stream Mapping" API=""/>
-     <RmFloatVariable NAME="intensidadL" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="0.980000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
+     <RmFloatVariable NAME="intensidadL" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="0.320000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
      <RmVectorVariable NAME="lightDirection" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE_0="0.000000" VALUE_1="0.000000" VALUE_2="100.000000" VALUE_3="0.000000" MIN="-10.000000" MAX="10.000000" CLAMP="FALSE" NORMALIZE="FALSE"/>
-     <RmFloatVariable NAME="f1" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="0.920000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
-     <RmFloatVariable NAME="f2" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="0.820000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
+     <RmFloatVariable NAME="f1" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="1.441600" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
+     <RmFloatVariable NAME="f2" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="1.240000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
      <RmFloatVariable NAME="f3" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="0.500000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
-     <RmColorVariable NAME="c4" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="0.529412" VALUE_1="0.692597" VALUE_2="1.000000" VALUE_3="1.000000"/>
-     <RmColorVariable NAME="c1" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="1.000000" VALUE_1="0.621053" VALUE_2="0.659250" VALUE_3="0.589474"/>
-     <RmColorVariable NAME="c2" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="1.000000" VALUE_1="0.556462" VALUE_2="0.542370" VALUE_3="1.000000"/>
-     <RmColorVariable NAME="c3" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="1.000000" VALUE_1="0.768421" VALUE_2="0.694737" VALUE_3="1.000000"/>
-     <RmShaderConstant NAME="c1" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="c2" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="c3" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="c4" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="f1" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="f2" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="f3" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="intensidadL" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="lightDirection" API="" REGISTER="-1"/>
+     <RmColorVariable NAME="c4" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="0.235294" VALUE_1="0.692597" VALUE_2="1.000000" VALUE_3="1.000000"/>
+     <RmColorVariable NAME="c1" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="0.600000" VALUE_1="0.621053" VALUE_2="0.659250" VALUE_3="0.589474"/>
+     <RmColorVariable NAME="c2" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="0.980392" VALUE_1="0.556462" VALUE_2="0.542370" VALUE_3="1.000000"/>
+     <RmColorVariable NAME="c3" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="0.141176" VALUE_1="0.768421" VALUE_2="0.694737" VALUE_3="1.000000"/>
+     <RmSampler NAME="DiffuseMap" API="" REGISTER="-1"/>
+     <RmShaderConstant NAME="Rim_Start" API="" REGISTER="-1"/>
+     <RmShaderConstant NAME="Rim_End" API="" REGISTER="-1"/>
+     <RmShaderConstant NAME="Light_Direction" API="" REGISTER="-1"/>
+     <RmShaderConstant NAME="Ambient_Color" API="" REGISTER="-1"/>
+     <RmShaderConstant NAME="Light_Color" API="" REGISTER="-1"/>
+     <RmShaderConstant NAME="Rim_Multiplier" API="" REGISTER="-1"/>
+     <RmShaderConstant NAME="Rim_Color" API="" REGISTER="-1"/>
     </RmGLPass>
    </RmOpenGLEffect>
    <RmOpenGLEffect NAME="PixelLight" API="OpenGL" ACTIVE_CAMERA="">
@@ -1406,8 +1452,8 @@ void main(void)
    gl_FragColor = colorfinal;
 }]]></RmShaderCode></RmGLShader>
      <RmStreamMapReference NAME="Stream Mapping" API=""/>
-     <RmBooleanVariable NAME="tLight" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="FALSE"/>
-     <RmFloatVariable NAME="iLight" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="1.000000" MIN="0.000000" MAX="1.000000" CLAMP="TRUE"/>
+     <RmBooleanVariable NAME="tLight" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="TRUE"/>
+     <RmFloatVariable NAME="iLight" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="0.860000" MIN="0.000000" MAX="1.000000" CLAMP="TRUE"/>
      <RmFloatVariable NAME="shine" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="100.000000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
      <RmFloatVariable NAME="iSpec" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="0.860000" MIN="0.000000" MAX="1.000000" CLAMP="TRUE"/>
      <RmVectorVariable NAME="lightVector" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="-50.000000" VALUE_1="1.000000" VALUE_2="100.000000" VALUE_3="0.000000" MIN="-10.000000" MAX="10.000000" CLAMP="FALSE" NORMALIZE="FALSE"/>
@@ -1415,15 +1461,15 @@ void main(void)
      <RmColorVariable NAME="cL" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="0.498039" VALUE_1="1.000000" VALUE_2="1.000000" VALUE_3="1.000000"/>
      <RmColorVariable NAME="cMD" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="0.874510" VALUE_1="0.831579" VALUE_2="0.452632" VALUE_3="1.000000"/>
      <RmColorVariable NAME="cMA" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE_0="0.400000" VALUE_1="0.000000" VALUE_2="0.000000" VALUE_3="1.000000"/>
-     <RmShaderConstant NAME="cL" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="cMA" API="" REGISTER="-1"/>
+     <RmShaderConstant NAME="lightVector" API="" REGISTER="-1"/>
+     <RmShaderConstant NAME="tLight" API="" REGISTER="-1"/>
      <RmShaderConstant NAME="cMD" API="" REGISTER="-1"/>
+     <RmShaderConstant NAME="cMA" API="" REGISTER="-1"/>
      <RmShaderConstant NAME="cMS" API="" REGISTER="-1"/>
+     <RmShaderConstant NAME="cL" API="" REGISTER="-1"/>
+     <RmShaderConstant NAME="shine" API="" REGISTER="-1"/>
      <RmShaderConstant NAME="iLight" API="" REGISTER="-1"/>
      <RmShaderConstant NAME="iSpec" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="lightVector" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="shine" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="tLight" API="" REGISTER="-1"/>
     </RmGLPass>
    </RmOpenGLEffect>
   </RmEffectGroup>
@@ -2278,16 +2324,6 @@ void main(void)
      <RmTextureObject NAME="permTexture" API="OpenGL" STATE_INDEX="0" VERTEX_TEXTURE="FALSE">
       <RmTextureReference NAME="permTexture" API=""/>
      </RmTextureObject>
-     <RmSampler NAME="permTexture" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="tLight" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="cMD" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="cMA" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="cMS" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="lightVector" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="MINFREQ" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="MAXFREQ" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="fTime0_X" API="" REGISTER="-1"/>
-     <RmShaderConstant NAME="ratio" API="" REGISTER="-1"/>
     </RmGLPass>
    </RmOpenGLEffect>
    <RmOpenGLEffect NAME="TextureChecker01" API="OpenGL" ACTIVE_CAMERA="">
