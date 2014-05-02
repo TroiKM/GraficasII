@@ -1,0 +1,3 @@
+http://www.slideshare.net/csaudk/fluid-simulation-and-control-for-computer-graphics
+
+https://software.intel.com/en-us/articles/fluid-simulation-for-video-games-part-1/
