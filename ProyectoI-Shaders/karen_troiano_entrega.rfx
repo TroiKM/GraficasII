@@ -1046,7 +1046,7 @@ Pass 0]]></RmTextDataBlock></RmStringVariable>
     </RmRegistryBranch>
     <RmRegistryBranch NAME="WORKSPACE" API="" XML_VERSION="RenderMonkey 1.71">
      <RmStringVariable NAME="LAST_SAVE" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
-6/5/2014 21:40:59]]></RmTextDataBlock></RmStringVariable>
+7/5/2014 9:8:16]]></RmTextDataBlock></RmStringVariable>
      <RmStringVariable NAME="VERSION" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
 RenderMonkey Version 1.82 (build 322)]]></RmTextDataBlock></RmStringVariable>
      <RmStringVariable NAME="XML_VERSION" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC=""><RmTextDataBlock TYPE="TEXT"><![CDATA[
@@ -1218,7 +1218,7 @@ float  fractalsum( const in vec2 Q) {
 float FresnelSchlickFunc() {
 
    vec3 Nn = normalize(vN);
-   vec3 Vn = -normalize(vC);
+   vec3 Vn = normalize(vC);
    float dotnv = abs(dot(Nn, Vn));
    float Kr = vEta + (1.0-vEta)*pow(1.0-dotnv,5.0);
    Kr = vKfr * pow(Kr,-(log(vBias)/log(2)));
@@ -1326,7 +1326,7 @@ void main(void) {
        <RmDynamicVariableValue ROW_INDEX="0" COLUMN_INDEX="0" VALUE="20"/>
       </RmDynamicVariableValueContainer>
      </RmDynamicVariable>
-     <RmFloatVariable NAME="fTime0_X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="Time0_X" VALUE="39.587624" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
+     <RmFloatVariable NAME="fTime0_X" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="Time0_X" VALUE="7.507000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
      <RmFloatVariable NAME="ratio" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="1.000000" MIN="0.000000" MAX="1.000000" CLAMP="FALSE"/>
      <RmFloatVariable NAME="bumpValue" API="" ARTIST_EDITABLE="TRUE" VARIABLE_SEMANTIC="" VALUE="49.310001" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
      <RmFloatVariable NAME="ratio2" API="" ARTIST_EDITABLE="FALSE" VARIABLE_SEMANTIC="" VALUE="10.000000" MIN="-1.000000" MAX="1.000000" CLAMP="FALSE"/>
