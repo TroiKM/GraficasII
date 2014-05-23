@@ -1,5 +1,5 @@
 //=====================================================
-// RenderMonkey Error Log Created 5/7/2014 3:41 pm
+// RenderMonkey Error Log Created 5/22/2014 7:48 pm
 //=====================================================
 [RmApplicationImpl.cpp] (line  454):  SUCCEEDED RMEffectInit()
 [RmApplicationImpl.cpp] (line  461):  SUCCEEDED AfxGetInstanceHandle()
