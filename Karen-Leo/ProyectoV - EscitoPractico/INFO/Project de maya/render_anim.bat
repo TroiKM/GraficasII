@@ -1,0 +1,1 @@
+"C:/Program Files/Autodesk/Maya2014/bin/render.exe" -r mr -v 4 -rt 16 -x 720 -y 405 -s 1 -e 90 -cam camera1 -proj "C:/Users/Leo/Documents/maya/projects/Informe Fluido" "C:/Users/Leo/Documents/maya/projects/Informe Fluido/scenes/fuego.mb"
